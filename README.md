@@ -1,6 +1,6 @@
-#Super Duper Telegram
+### Super Duper Telegram
 
-> An app for finding snacks  
+> An game based on Wavelength/Longwave. 
 
 ### Setup Instructions
 
