@@ -23,9 +23,9 @@ class Random extends React.Component {
     render(){
         return(
             <div>
-                <p>{this.state.randomScaleNumber}</p>
-                <Slider randomScaleNumber={this.state.randomScaleNumber}/>
-                <NewChoice calculateScale={this.calculateScale} />
+                <p>{ this.state.randomScaleNumber }</p>
+                <Slider randomScaleNumber={ this.state.randomScaleNumber }/>
+                <NewChoice calculateScale={ this.calculateScale } />
             </div>
         )
     }
