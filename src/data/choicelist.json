@@ -1,0 +1,14 @@
+{
+    "temp": {
+        "left": "Cold",
+        "right": "Hot"
+    },
+    "direction": {
+        "left": "Up",
+        "right": "Down"
+    },
+    "state": {
+        "left": "Living",
+        "right": "Dead"
+    }
+}

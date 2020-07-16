@@ -1,6 +1,6 @@
 ### Super Duper Telegram
 
-> An game based on Wavelength/Longwave. 
+> A game based on Wavelength/Longwave. 
 
 ### Setup Instructions
 
