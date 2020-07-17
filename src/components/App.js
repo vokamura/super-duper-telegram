@@ -1,7 +1,7 @@
 import React from 'react';
 // import logo from './logo.svg';
 import '.././App.css';
-import Random from './Random';
+import Game from './Game';
 // import NewChoice from './NewChoice';
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
         <p>
           Welcome to Super Duper Telegram!
         </p>
-        <Random />
+        <Game />
         {/* <NewChoice /> */}
       </header>
     </div>

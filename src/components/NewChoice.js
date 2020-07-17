@@ -1,6 +1,6 @@
 import React from 'react';
-import Random from './Random';
-import choicelist from '../data/choicelist.json';
+// import Game from './Game';
+
 
 class NewChoice extends React.Component{
     constructor(props){
@@ -16,7 +16,7 @@ class NewChoice extends React.Component{
     
     render(){
         return(
-            <button onClick={this.choiceClick}>New Choice</button>
+            <button onClick={this.choiceClick}>Click for New Card</button>
         )
     }
 }
