@@ -2,10 +2,10 @@ import React from 'react';
 import '../assets/slider.css';
 
 class Slider extends React.Component {
-    constructor(props){
-        super(props);
+    // constructor(props){
+        // super(props);
         // this.handleChange = this.handleChange.bind(this);
-    }
+    // }
 
     // handleChange(){
     //     console.log("props changed");

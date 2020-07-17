@@ -1,0 +1,30 @@
+[
+     {
+        "left": "Cold",
+        "right": "Hot"
+    },
+    {
+        "left": "Up",
+        "right": "Down"
+    },
+    {
+        "left": "Living",
+        "right": "Dead"
+    },
+    {
+        "left": "Comedy",
+        "right": "Drama"
+    },
+    {
+        "left": "Cloudy",
+        "right": "Clear"
+    },
+    {
+        "left": "Happy",
+        "right": "Sad"
+    },
+    {
+        "left": "Safe",
+        "right": "Dangerous"
+    }
+]

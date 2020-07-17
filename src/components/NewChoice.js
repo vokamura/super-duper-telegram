@@ -1,5 +1,4 @@
 import React from 'react';
-// import Game from './Game';
 
 
 class NewChoice extends React.Component{
@@ -8,9 +7,7 @@ class NewChoice extends React.Component{
         this.choiceClick = this.choiceClick.bind(this);
     }
 
-    choiceClick(event){
-        // event.stopPropogation();
-        console.log("yay new choice");
+    choiceClick(){
         this.props.calculateScale();
     }
     

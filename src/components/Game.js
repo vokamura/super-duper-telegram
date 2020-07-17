@@ -1,9 +1,9 @@
 import React from 'react';
-import axios from 'axios';
 import Choices from './Choices';
 import Slider from './Slider';
 import NewChoice from './NewChoice';
-import choicelist from './choicelist.json';
+import Guess from './Guess';
+import choicelist from '../data/choicelist.json';
 
 class Game extends React.Component {
     constructor(props){
@@ -18,14 +18,16 @@ class Game extends React.Component {
     // }
 
     calculateScale(){
-        // let randomNumber = Math.floor(Math.random() * 100) + 1;
         let randomNumber = Math.round((Math.random()*(100-0)+0)/5)*5
         this.setState({ randomScaleNumber: randomNumber });
         this.chooseCard();
     }
 
     chooseCard(){
-        let randomChoice = Math.floor(Math.random()*3);
+        let choiceListLength = choicelist.length;
+        // console.log(choiceListLength);
+        let randomChoice = Math.floor(Math.random()*choiceListLength);
+        // console.log(randomChoice);
         let leftSide = choicelist[randomChoice].left;
         let rightSide = choicelist[randomChoice].right;
         // console.log(randomChoice);
@@ -38,9 +40,10 @@ class Game extends React.Component {
     render(){
         return(
             <div>
-                <p>{this.state.randomScaleNumber}</p>
+                {/* <p>{this.state.randomScaleNumber}</p> */}
                 <Choices leftChoice={this.state.leftChoice} rightChoice={this.state.rightChoice}/>
                 <Slider randomScaleNumber={this.state.randomScaleNumber}/>
+                <Guess />
                 <NewChoice calculateScale={this.calculateScale} />
             </div>
         )

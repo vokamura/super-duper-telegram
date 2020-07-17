@@ -2,18 +2,13 @@ import React from 'react';
 import '../assets/choices.css';
 
 class Choices extends React.Component{
-    constructor(props){
-        super(props);
-        // this.state = { left: "", right: "" };
-    }
-
     render(){
         return(
             <div className="choiceCards">
-                <div id="leftSide">
+                <div className="leftAndRightStyles">
                     <p>{this.props.leftChoice}</p>
                 </div>
-                <div id="rightSide">
+                <div className="leftAndRightStyles">
                     <p>{this.props.rightChoice}</p>
                 </div>
             </div>

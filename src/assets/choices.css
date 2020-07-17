@@ -1,19 +1,14 @@
 .choiceCards {
     height: 100px;
     width: 80vw;
-    background-color: pink;
+    /* background-color: pink; */
     display: flex;
     justify-content: space-between;
 }
 
-#leftSide{
+.leftAndRightStyles{
     height: 100px;
     width: 200px;
-    background-color: turquoise;
+    border: 1px dashed black;
 }
 
-#rightSide{
-    height: 100px;
-    width: 200px;
-    background-color: yellow;
-}
