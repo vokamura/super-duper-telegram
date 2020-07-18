@@ -17,3 +17,8 @@
     width: 200px;
     background-color: yellow;
 }
+
+.userGuess{
+    height: 60px;
+    background-color: violet;
+}
