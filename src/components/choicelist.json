@@ -10,5 +10,33 @@
     {
         "left": "Living",
         "right": "Dead"
+    },
+    {
+        "left": "Hard",
+        "right": "Easy"
+    },
+    {
+        "left": "Pretty",
+        "right": "Ugly"
+    },
+    {
+        "left": "Sad",
+        "right": "Happy"
+    },
+    {
+        "left": "Light",
+        "right": "Dark"
+    },
+    {
+        "left": "Powerful",
+        "right": "Weak"
+    },
+    {
+        "left": "Thick",
+        "right": "Thin"
+    },
+    {
+        "left": "Never",
+        "right": "Always"
     }
 ]

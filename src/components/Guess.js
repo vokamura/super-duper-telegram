@@ -4,12 +4,13 @@ class Guess extends React.Component{
     constructor(props){
         super(props);
         this.state = { userGuess: "" };
-        this.handleGuessSubmit = this.handleGuessSubmit.bind(this);
+        this.handleHintSubmit = this.handleHintSubmit.bind(this);
         this.choiceClick = this.choiceClick.bind(this);
         this.handleReset = this.handleReset.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    handleGuessSubmit(){
+    handleHintSubmit(){
         let userInput = document.getElementById('userGuess').value;
         console.log(userInput);
         this.setState({ userGuess: userInput });
@@ -17,6 +18,17 @@ class Guess extends React.Component{
 
     choiceClick(){
         this.props.calculateScale();
+    }
+
+    handleSubmit(){
+        console.log("Input value is: ", document.getElementById("teamGuess").value);
+        console.log("Random scale number is:", this.props.randomScaleNumber);
+        // debugger;
+        if(this.props.randomScaleNumber == document.getElementById("teamGuess").value) {
+            console.log("they match");
+        } else {
+            console.log("they don't match");
+        }
     }
 
     handleReset(){
@@ -33,15 +45,24 @@ class Guess extends React.Component{
                     <p className="userGuess">{this.state.userGuess}</p>
                 </div>
                 <div className={this.state.userGuess === "" && this.props.leftChoice !== "" ? "showElement" : "hideElement"}>
-                    <input type="text"  id="userGuess" placeholder="Enter your guess here" />
-                    <button onClick={this.handleGuessSubmit} >Submit Guess</button>
+                    <input type="text"  id="userGuess" placeholder="Enter your hint here" />
+                    <button onClick={this.handleHintSubmit} >Submit Hint</button>
                 </div>
                 <div className={this.state.userGuess === "" ? "showElement" : "hideElement"}>
                     <button onClick={this.choiceClick} >Click for New Card</button>
                 </div>
-                <div className={this.state.userGuess === "" ? "hideElement" : "showElement"}>
-                    <button onClick={this.handleReset}>Click for New Turn</button>
+
+                <div >
+                    <input type="text"  id="teamGuess" placeholder="Submit scoring number" />
+                    {/* <button onClick={this.handleHintSubmit} >Submit Scoring Number</button> */}
                 </div>
+
+                <div className={this.state.userGuess === "" ? "hideElement" : "showElement"}>
+                    <button onClick={this.handleSubmit}>Submit Guess</button>
+                </div>
+                {/* <div className={this.state.userGuess === "" ? "hideElement" : "showElement"}>
+                    <button onClick={this.handleReset}>Reset Round</button>
+                </div> */}
             </div>
         )
     }

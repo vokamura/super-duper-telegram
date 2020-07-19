@@ -29,7 +29,7 @@ class Game extends React.Component {
     }
 
     chooseCard(){
-        let randomChoice = Math.floor(Math.random()*3);
+        let randomChoice = Math.floor(Math.random()*10);
         let leftSide = choicelist[randomChoice].left;
         let rightSide = choicelist[randomChoice].right;
         this.setState({ leftChoice: leftSide, rightChoice: rightSide });
@@ -38,10 +38,10 @@ class Game extends React.Component {
     render(){
         return(
             <div>
-                {/* <p>{this.state.randomScaleNumber}</p> */}
+                <p>{this.state.randomScaleNumber}</p>
                 <Choices leftChoice={this.state.leftChoice} rightChoice={this.state.rightChoice}/>
                 <Slider randomScaleNumber={this.state.randomScaleNumber}/>
-                <Guess leftChoice={this.state.leftChoice} calculateScale={this.calculateScale}/>
+                <Guess leftChoice={this.state.leftChoice} calculateScale={this.calculateScale} randomScaleNumber={this.state.randomScaleNumber}/>
             </div>
         )
     }
