@@ -7,7 +7,7 @@ class Guess extends React.Component{
         this.handleHintSubmit = this.handleHintSubmit.bind(this);
         this.choiceClick = this.choiceClick.bind(this);
         this.handleReset = this.handleReset.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
+        // this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     handleHintSubmit(){
@@ -20,16 +20,14 @@ class Guess extends React.Component{
         this.props.calculateScale();
     }
 
-    handleSubmit(){
-        console.log("Input value is: ", document.getElementById("teamGuess").value);
-        console.log("Random scale number is:", this.props.randomScaleNumber);
-        // debugger;
-        if(this.props.randomScaleNumber == document.getElementById("teamGuess").value) {
-            console.log("they match");
-        } else {
-            console.log("they don't match");
-        }
-    }
+    // handleSubmit(){
+    //     console.log("Random scale number is:", this.props.randomScaleNumber);
+    //     if(this.props.randomScaleNumber == document.getElementById("guessRange").value) {
+    //         console.log("they match");
+    //     } else {
+    //         console.log("they don't match");
+    //     }
+    // }
 
     handleReset(){
         console.log("reset clicked");
@@ -48,18 +46,20 @@ class Guess extends React.Component{
                     <input type="text"  id="userGuess" placeholder="Enter your hint here" />
                     <button onClick={this.handleHintSubmit} >Submit Hint</button>
                 </div>
+
                 <div className={this.state.userGuess === "" ? "showElement" : "hideElement"}>
                     <button onClick={this.choiceClick} >Click for New Card</button>
                 </div>
 
-                <div >
+                {/* <div >
                     <input type="text"  id="teamGuess" placeholder="Submit scoring number" />
-                    {/* <button onClick={this.handleHintSubmit} >Submit Scoring Number</button> */}
-                </div>
+                    <button onClick={this.handleHintSubmit} >Submit Scoring Number</button>
+                </div> */}
 
                 <div className={this.state.userGuess === "" ? "hideElement" : "showElement"}>
                     <button onClick={this.handleSubmit}>Submit Guess</button>
                 </div>
+
                 {/* <div className={this.state.userGuess === "" ? "hideElement" : "showElement"}>
                     <button onClick={this.handleReset}>Reset Round</button>
                 </div> */}
